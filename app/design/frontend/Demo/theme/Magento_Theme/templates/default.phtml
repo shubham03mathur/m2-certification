@@ -1,0 +1,21 @@
+<?php
+/*
+ * Render Catalog Products on Homepage
+ **/
+
+?>
+
+<?php
+echo $this->getLayout()->createBlock("Magento\Catalog\Block\Product\Widget\NewWidget")->setDisplayType("all_products")->setProductsCount("10")->setTemplate("product/widget/new/content/new_grid.phtml")->toHtml();
+?>
+<script>
+    require([
+        'jquery',
+        'mage/mage',
+        'quickview/owl',
+        'quickview/cloudzoom',
+        'quickview/bxslider',
+        'productQuickview'
+    ], function ($) {
+    });
+</script>
